@@ -1,0 +1,186 @@
+----------------------------------ls commands------------------------
+
+1)ls -a ---> enlist the whole list of the current directory including the hidden files.
+
+2) ls -l -----> It will show the list in a long list format.
+
+3) ls -d */ -----> It is used to display only subdirectories.
+
+4) ls -r ---- > It is used to print the list in reverse order.
+
+5) ls ../ -----> It give the contents of parent directory.
+
+6) ls ~	----> It gives the contents of home directory.
+
+7) ls -lt	-----> It will sort the list by displaying recently modified filed at top.
+
+----------------------------------mkdir-------------------------------------
+
+1) mkdir <directory_name> ----> for create a new directory
+
+2) mkdir <dirname1> <dirname2> <dirname3> ...  ----> To make Multiple directory at once.
+
+
+3) mkdir --version  ---> It shows the version number and some details of the license and then exits.
+
+----------------------------------rmdir-----------------------------------
+
+1) rmdir <directory> ---> to delete a directory
+
+2) rmdir <dirname1> <dirname2> <dirname3> ...  ----> to delete Multiple directory at once.
+
+3) rmdir -p <directory> ---> delete a directory including its sub-directories all at once
+
+---------------------------------- cat ----------------------------------
+
+1) cat > test.txt   ---> create a text file and will enter in the editor mode. Now, enter the desired text and press CTRL + D key to save and exit the file and it will return to the command line.
+
+2) cat test.txt   ---->To display the content of the file
+
+3) ls - l test.txt  ----> To list the information of the created file
+
+4) cat >> filename -------> append in the last of a file ,something in your already existing file.
+
+5) cat file1 > file2 ----------> copied content of file1 into file2
+
+6) cat filename1 filename2... > New_filename ----> concatenate the contents of multiple files in a single new file.
+
+7) cat -n <fileName> ---> displays line numbers in front of each line in a file
+
+----------------------------------touch-----------------------------------
+
+1) touch test1.txt  ----> To create a file
+
+2) touch a.txt b.txt ... -----> to create multiple file( file type cane be differnt)
+
+3) touch -a  ------------> To change file access and modification time.
+------------------- redirect (>) symbol------------------------------------
+
+1) > test.txt  ------>  To create a test file
+
+-----------------------echo and printf command---------------------------
+
+1) echo "file content" > filename.txt  ---------> to create a file
+
+2) print "file content" > filename.txt ---------> to create a file
+
+--------------------------------file command----------------------------------
+
+1) file filename -----------> used to determine the file type
+
+2) file * -----------------> Used to list types of all the files.
+
+---------------------------rm -----------------------------------------
+
+1) rm filename ---------------------> used to delete files
+
+2) rm *extension ------------------->  Used to delete files having same extension
+
+3) rm -r or R  --------------> To delete a directory recursively.
+
+4) rm -i --------> Remove a file interactively.
+
+5) rm -rf ---------> Remove a directory forcefully.
+
+-----------------------------copy ----------------------------------------
+
+1) cp <existing file name> <new file name>   -----> To copy a file into the same directory syntax will be
+
+2) cp -r <sourceDirectory> <destinationDirectory>  ----> used to copy a directory including all its content from a source directory to the destination directory.
+
+3) cp *.<extension> <destinationDirectory>  ---> Multiple files or directories can be copied to a destination directory at once
+
+-----------------------------mv--------------------------------------------
+
+1) mv -i --------> Asks for permission to over write.
+
+2)mv * ------------> Move multiple files to a specific directory.
+
+---------------------------------------
+
+3) mv -u ------------> Only move those files that doesn't exist.
+
+---------------------------------head-------------------------------------
+
+1) head filename -------------> By default, it displays starting 10 lines of any file.
+
+2) he ad filename1 filename2 ... ---->it display starting 10 lines of above  file.
+
+3) head -n filename ---> it displays starting n lines of any file.
+
+4) head -c n filename ----> The 'head -c' command counts the number of bytes of a file.
+
+---------------------------------tail-------------------------------------
+
+1) tail filename -------------> By default, it displays last 10 lines of any file.
+
+2) tail filename1 filename2 ... ---->it display last 10 lines of above  file.
+
+3) tail -n filename ---> it displays last n lines of any file.
+
+4) tail -c n filename ----> The 'tail -c' command counts the number of bytes of a file.
+
+-------------------------------tac-------------------------------------
+
+1) tac <file name>  -------> It will display the file content in reverse order.
+
+----------------------------------more----------------------
+more filename  ----------------> As 'cat' command displays the file content. Same way 'more' command also displays the content of a file. Only difference is that, in case of larger files, 'cat' command output will scroll off your screen while 'more' command displays output one screenful at a time.
+
+Following keys are used in 'more' command to scroll the page:
+
+Enter key: To scroll down page line by line.
+Space bar: To go to next page.
+b key: To go to the backward page.
+/ key: Lets you search the string.
+
+-------------------for process information -----------------------------
+
+1) top ----------->The top command is used to list all the running processes in a Linux system. It displays detailed information such as PID, username, CPU usage, time, executed command, and more.
+
+2) ps --------->  display the process information.
+
+-------------------------grep ----------------------------------------
+
+grep ---> global regular expression print
+
+1) cat a.txt | grep search_word   ------> it wil seacrh and display the search_word(with pipe)
+
+2) grep   searc_word   filename -------->it wil seacrh and display the search_word(without pipe)
+
+3) grep -v <searchWord> <fileName>  ---------->displays lines not matching to the specified word.
+
+------------------------sed ----------------------------------------------
+
+1) $sed 's/unix/linux/' c.txt -------------> it replace first unix with linux 
+
+2) $sed 's/unix/linux/g' c.txt -------------> it replace all(globally) unix with linux 
+
+-------------------------sort---------------------------------------------
+
+1) sort filename -------------->  sorts the file content in an alphabetical order
+
+2) sort -k<columnNumber> <fileName> -------> If a file has more than one column, column number is used to sort a specific column.
+
+3) sort -n -k<columnNumber> <fileName> --->Numeric sorting is different from alphabetical sorting. For numeric sorting option 'n' is used along with the column number if required.
+
+-------------------------wc-------------------------------------------
+
+1)wc <file name>  ---> t will display the number of lines, words, and bytes from the file.
+
+2) wc <file1> <file2> -----> To display the complete count information of multiple files at once.
+
+3) wc - l <file name>  --------> used to display the number of lines in a file
+
+4)wc -c <file name> ------------> The '-c' option is used to display the number of bytes in a file.
+
+5) wc -w <file name>  -----> used to display the total number of words from a file. 
+
+6) ls | wc -l  -------> Count the number files in a directory
+
+7) wc -L <file name>  -----------> Display the length of the longest line
+
+-------------------------------------awk----------------------------
+The Awk is a powerful scripting language used for text scripting. It searches and replaces the texts and sorts, validates, and indexes the database.
+
+Syntax:  awk options 'selection _criteria {action }' input-file > output-file

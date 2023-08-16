@@ -1,0 +1,21 @@
+Steps to write and execute a script
+
+1) Open the terminal. Go to the directory where you want to create your script.
+2) Create a file with .sh extension.
+3) Write the script in the file using an editor.
+4) Make the script executable with command chmod +x <fileName>.
+5) Run the script using ./<fileName> or bash <filename>
+
+
+
+Shell Parameters
+
+Parameters	    Function
+$1-$9	        Represent positional parameters for arguments one to nine
+${10}-${n}	    Represent positional parameters for arguments after nine
+$0	    Represent name of the script
+$∗	    Represent all the arguments as a single string
+$@	    Same as $∗, but differ when enclosed in (")
+$#	    Represent total number of arguments
+$$	    PID of the script
+$?	    Represent last return code
