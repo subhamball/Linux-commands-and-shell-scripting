@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Specify the directory where you want to create the folders
-parent_directory="/home/subham/gem5_project/in_order"
+parent_directory="/home/subham/gem5_project/out_of_order"
 
 # Define arrays for four parameters
 param1=("l1d_size=128" "l1d_size=256" "l1d_size=512")
@@ -18,7 +18,7 @@ do
     do
       for val4 in "${param4[@]}"
       do
-        folder_name="${val1}_${val2}_${val3}_${val4}"
+        folder_name="out_of_order_${val1}_${val2}_${val3}_${val4}"
         folder_path="$parent_directory/$folder_name"
         
         # Check if the folder already exists
